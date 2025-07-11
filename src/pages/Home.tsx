@@ -15,15 +15,7 @@ export default function Home() {
 
   return (
     <MainLayout>
-      {[...Array(5)].map((_, i) => (
-        <div
-          key={i}
-          className="transition-opacity duration-500"
-          style={{ opacity: i < visibleCarousels ? 1 : 0 }}
-        >
-          {i < visibleCarousels && <Carousel />}
-        </div>
-      ))}
+      <Carousel />
     </MainLayout>
   );
 }
